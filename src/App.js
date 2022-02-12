@@ -1,9 +1,8 @@
-import React from "react";
 import ReactDOM from "react-dom";
 import Pet from "./Pet";
+import SearchParams from "./SearchParams";
 
-
-const App = () => {
+/* const App = () => {
   return React.createElement("div", {}, [
     React.createElement("h1", { id: "my-brand" }, "Adopt Me!"),
     React.createElement(Pet, {
@@ -22,6 +21,19 @@ const App = () => {
       breed: "Wheaten Terrier",
     }),
   ]);
-};
+}; */
 
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
+//using JSX
+const App = () => {
+  return (
+  <div>
+    <h1>Adopt Me !</h1>
+    {/* <Pet name="Luna" animal="Dog" breed="Havanese"/>
+    <Pet name="Pepper" animal="Bird" breed="Cockatiel"/>
+    <Pet name="Beam" animal="Dog" breed="Wheaten Terrier"/> */}
+    <SearchParams/>
+    </div>
+  );
+}
+
+ReactDOM.render(<App/>, document.getElementById("root"));
